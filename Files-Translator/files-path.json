@@ -1,0 +1,14 @@
+{
+  "ProjectPath": "C:\\Users\\rodri\\Documents\\To-Translate",
+  "TranslationFolder": "base",
+  "Sources": [
+    "WW_English.txt",
+    "WW_English_opt.txt"
+  ],
+  "Translations": [
+    "NA_Portuguese.txt",
+    "NA_Portuguese_int.txt"
+  ],
+  "OutputFolder": "C:\\Users\\rodri\\Documents\\Translated-Project",
+  "LogFileName":  "translation-log.txt"
+}
