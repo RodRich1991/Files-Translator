@@ -79,7 +79,7 @@ namespace Files_Translator
             if (String.IsNullOrWhiteSpace(input))
                 return input;
 
-            Console.WriteLine($"Searching Id of text: {input}. File: {currentPath}:{linePos}");
+            Console.WriteLine($"Searching Id of text: \"{input}\" (Path: {currentPath}:{linePos})");
             var escapeInput = Regex.Replace(Regex.Escape(input), "’|'|`", "('|’|`)"); // Normalize str single quotes to consider (’ ' `) as same shit, and escape special characters
             Regex targetRx = new Regex("\"(?<id>.*)\":\\s\"" + escapeInput + '"'); // Regex to find ID of correspondent line into search files
             try
@@ -104,7 +104,7 @@ namespace Files_Translator
             if (String.IsNullOrWhiteSpace(labelId))
                 return labelId;
 
-            Console.WriteLine($"Searching Translation for Id: {labelId}. File: {currentPath}");
+            Console.WriteLine($"Searching Translation for Id: {labelId} (Path: {currentPath}:{linePos})");
             Regex translatedRx = new Regex('"' + Regex.Escape(labelId) + "\":\\s\"(?<translation>.*)\""); // Regex to find correspondent translated text by id
             try
             {
